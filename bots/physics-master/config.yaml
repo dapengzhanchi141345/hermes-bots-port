@@ -1,0 +1,100 @@
+model:
+  default: agnes-3.0-flash
+  provider: agnes-physics-master
+  base_url: https://api.agnes-ai.cn/v1
+  context_length: 512000
+providers:
+  agnes-flash:
+    name: agnes-flash
+    api: https://api.agnes-ai.cn/v1
+    base_url: https://api.agnes-ai.cn/v1
+    api_key: ''
+    key_env: AGNES_FLASH_API_KEY
+    discover_models: false
+    context_length: 512000
+    models:
+      agnes-3.0-flash: {}
+      agnes-2.0-flash: {}
+      agnes-2.5-flash: {}
+      agnes-2.5-pro: {}
+  agnes-reason:
+    name: agnes-reason
+    api: https://api.agnes-ai.cn/v1
+    base_url: https://api.agnes-ai.cn/v1
+    api_key: ''
+    key_env: AGNES_REASON_API_KEY
+    discover_models: false
+    context_length: 512000
+    models:
+      agnes-2.0-flash: {}
+      agnes-2.5-flash: {}
+      agnes-2.5-pro: {}
+  agnes-media:
+    name: agnes-media
+    api: https://api.agnes-ai.cn/v1
+    base_url: https://api.agnes-ai.cn/v1
+    api_key: ''
+    key_env: AGNES_MEDIA_API_KEY
+    discover_models: false
+    context_length: 512000
+    models:
+      agnes-image-2.1-flash: {}
+      agnes-image-2.5-flash: {}
+      agnes-video-2.5: {}
+      agnes-video-2.5-flash: {}
+  agnes-main:
+    name: agnes-main
+    api: https://apihub.agnes-ai.com/v1
+    base_url: https://apihub.agnes-ai.com/v1
+    api_key: ''
+    key_env: AGNES_MAIN_API_KEY
+    discover_models: false
+    context_length: 512000
+    models:
+      agnes-3.0-flash: {}
+      agnes-2.0-flash: {}
+      agnes-2.5-flash: {}
+      agnes-2.5-pro: {}
+      agnes-image-2.1-flash: {}
+      agnes-image-2.5-flash: {}
+      agnes-video-2.5: {}
+      agnes-video-2.5-flash: {}
+  agnes-physics-master:
+    name: agnes-physics-master
+    api: https://api.agnes-ai.cn/v1
+    base_url: https://api.agnes-ai.cn/v1
+    key_env: AGNES_KEY_PHYSICS_MASTER
+    discover_models: false
+    context_length: 512000
+    models:
+      agnes-3.0-flash: {}
+fallback_providers:
+- provider: agnes-main
+  model: agnes-3.0-flash
+- provider: agnes-flash
+  model: agnes-3.0-flash
+toolsets:
+- hermes-cli
+agent:
+  max_turns: 60
+  gateway_timeout: 1800
+  restart_drain_timeout: 180
+  api_max_retries: 3
+  service_tier: ''
+  tool_use_enforcement: auto
+  task_completion_guidance: true
+  parallel_tool_call_guidance: true
+  environment_probe: true
+  environment_hint: ''
+  coding_context: auto
+  gateway_timeout_warning: 900
+  clarify_timeout: 600
+  gateway_notify_interval: 180
+  gateway_auto_continue_freshness: 3600
+  image_input_mode: auto
+  disabled_toolsets: []
+  verbose: false
+  reasoning_effort: medium
+onboarding:
+  seen:
+    tool_progress_prompt: true

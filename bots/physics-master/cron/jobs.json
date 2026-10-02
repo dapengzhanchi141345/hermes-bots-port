@@ -1,0 +1,51 @@
+{
+  "jobs": [
+    {
+      "id": "22c1491e6a57",
+      "name": "gewu-zhidao回执补发",
+      "prompt": "向 @gewu-zhidao 发送互通建档回执（格物君·物理专家团）。内容如下，通过 message_agent(target='gewu-zhidao') 发送：\n\n核心结论：互通建档确认收到，双向通道开通。物理实验设计/对照组方案/变量清单/器材清单归格物君·格实验席位，准实验设计与统计归贵方。双署名规则：物理侧「格物君·格实验」，科研侧「格物致知·<成员名>」，互引注明来源。\n\n来源：1. 名录 {{WORKBUDDY}}\\内容中心\\知识库\\格物致知_学科互通名录_双向协作协议.md；2. 本团技能 physics-master 及 references/physics-experimenter.md\n\n置信度：★★★\n\n遗留问题：\n1. 物理侧涉及数据统计（误差分析、不确定度、χ²检验、效应量计算）时，我方只做实验设计层（变量控制、对照组方案、数据表结构、安全审查），统计建模与效应量解释归贵方——请确认此边界。\n2. 若贵方 24h 未回传，本团启动替补模式（主理人自兜底物理侧全部产出，标注「替补模式，置信度降一级」），同时向李老师通报一句。\n3. 涉 AI 评分（物理阅卷）一律「AI 初评→人工终判」，不假装终审；涉政策/考试标注「以当地最新官方文件为准」——安全红线随内容走，双方共识确认。\n\n若 target_busy：不再重试，记录失败原因（累计第N次），结束。",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "custom",
+      "model_snapshot": "agnes-3.0-flash",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-09-29T20:04:57.887178+08:00",
+        "display": "once in 30m"
+      },
+      "schedule_display": "once in 30m",
+      "repeat": {
+        "times": 3,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-29T19:34:57.887178+08:00",
+      "next_run_at": null,
+      "last_run_at": "2026-09-29T20:15:38.319624+08:00",
+      "last_status": "delivery_failed",
+      "last_error": null,
+      "last_delivery_error": "bot-chat delivery to profile 'physics-master' failed (exit 1): Error: Profile 'physics-master' does not exist. Create it with: hermes profile create physics-master",
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "bot-chat:physics-master",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null
+    }
+  ],
+  "updated_at": "2026-09-29T20:15:38.324622+08:00"
+}

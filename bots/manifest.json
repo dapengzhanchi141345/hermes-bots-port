@@ -1,0 +1,112 @@
+{
+ "profiles": [
+  {
+   "name": "default",
+   "desc": "总调度 bot（root）"
+  },
+  {
+   "name": "bio-master",
+   "desc": "'万物生·生物专家团: 全学段生物+出题评分+阅卷'"
+  },
+  {
+   "name": "chem-master",
+   "desc": "'炼金士·化学专家团: 全学段化学+实验探究+阅卷'"
+  },
+  {
+   "name": "chief",
+   "desc": "金策宗师团总管·首席操盘手 bot：全部门调用权/自主进化/每日复盘/下指令，总管所有子bot，专属工作区 {{WORKBUDDY}}\\金策宗师团\\chief"
+  },
+  {
+   "name": "chinese-master",
+   "desc": "'锦心子·语文专家团: 全学段语文+文本细读+阅卷'"
+  },
+  {
+   "name": "color-design",
+   "desc": "'色彩设计大师: 配色UI设计Token'"
+  },
+  {
+   "name": "education-admin",
+   "desc": "'教务智能体: 学校全领域管理19部门'"
+  },
+  {
+   "name": "english-master",
+   "desc": "'通语者·英语专家团: 全学段英语+听说读写+阅卷'"
+  },
+  {
+   "name": "geo-master",
+   "desc": "'山海客·地理专家团: 全学段地理+区域地理+阅卷'"
+  },
+  {
+   "name": "gewu-zhidao",
+   "desc": "'格物致知科研智库: 课题申报教科研论文6席'"
+  },
+  {
+   "name": "history-master",
+   "desc": "'史鉴君·历史专家团: 全学段历史+史料实证+阅卷'"
+  },
+  {
+   "name": "it-edu",
+   "desc": "'码智君·信息科技专家团: 信息科技编程8席+信息科技阅卷'"
+  },
+  {
+   "name": "jiao-lian-zhong-shu",
+   "desc": "'教联中枢·教育IP: 多平台内容与分发'"
+  },
+  {
+   "name": "math-master",
+   "desc": "'数算子·数学专家团: 全学段数学9席+数论竞赛+阅卷'"
+  },
+  {
+   "name": "morality-master",
+   "desc": "'明辨君·道法专家团: 全学段道德法治+价值辨析+阅卷'"
+  },
+  {
+   "name": "music-craft-studio",
+   "desc": "'音律工坊·AI音乐: 词曲编曲混音7席'"
+  },
+  {
+   "name": "pe-master",
+   "desc": "'圣运君·体育专家团: 全学段体育与健康, 动作技能教学/体能体测/球类竞赛/健康教育/运动心理/中医太极养生×青少年成长/教育心理学×发展心理学×心理健康+体育阅卷评分官'"
+  },
+  {
+   "name": "physics-master",
+   "desc": "'格物君·物理专家团: 全学段物理+理论实验解题+阅卷'"
+  },
+  {
+   "name": "qihuang-medical",
+   "desc": "'岐黄医典·中医专家团: 中医中西医诊疗8专家'"
+  },
+  {
+   "name": "risk-officer",
+   "desc": "金策宗师团风控官 bot：独立风控官(审度司)，对交易部提案做LLM一票否决复核，直报CIO，与交易部物理隔离"
+  },
+  {
+   "name": "strategy-rd",
+   "desc": "金策宗师团策略研发官 bot：接管strategy_rd+meta_evolver判断环节(策略上线/退役/调参)，输出进研发台账"
+  },
+  {
+   "name": "suan-jing-ge",
+   "desc": "'算经阁·财会专家团: 会计报表税务审计9席'"
+  },
+  {
+   "name": "teacher-promotion",
+   "desc": "'青云梯·职称晋级: 职称晋级填表7席'"
+  },
+  {
+   "name": "tianji-ge",
+   "desc": "'天机阁·玄学专家团: 八字风水占卜起名择吉10宗师+精确排盘'"
+  },
+  {
+   "name": "video-crew",
+   "desc": "'视频创作团: 视频分镜剪辑6席+电子书转电影'"
+  },
+  {
+   "name": "yan-shu-kaoyan",
+   "desc": "'研枢考研专家团: 考研公共课+14门类27席'"
+  },
+  {
+   "name": "yimou-pavilion",
+   "desc": "'弈谋阁·博弈推演: 棋类博弈战略推演5席'"
+  }
+ ]
+}

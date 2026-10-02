@@ -1,0 +1,10 @@
+description: 金策宗师团总管·首席操盘手 bot：全部门调用权/自主进化/每日复盘/下指令，总管所有子bot，专属工作区 {{WORKBUDDY}}\金策宗师团\chief
+description_auto: false
+display_name: 金策·总管·首席操盘手
+ui_meta:
+  hermes-bots:
+    groups:
+      - 金策·宗师团
+    group: 金策·宗师团
+_ui_meta_revisions:
+  hermes-bots: 2

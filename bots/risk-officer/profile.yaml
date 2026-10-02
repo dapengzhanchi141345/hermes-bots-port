@@ -1,0 +1,10 @@
+description: 金策宗师团风控官 bot：独立风控官(审度司)，对交易部提案做LLM一票否决复核，直报CIO，与交易部物理隔离
+description_auto: false
+display_name: 金策·风控官
+ui_meta:
+  hermes-bots:
+    groups:
+      - 金策·宗师团
+    group: 金策·宗师团
+_ui_meta_revisions:
+  hermes-bots: 4

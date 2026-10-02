@@ -1,0 +1,54 @@
+{
+  "jobs": [
+    {
+      "id": "29c7894d8337",
+      "name": "金策·自动新闻事件源 30min",
+      "prompt": "Run this exact command in the terminal and return its full stdout as the final response:\n\n{{HERMES_HOME_PARENT}}/.workbuddy/binaries/python/envs/ate/Scripts/python.exe {{JINCE_ENGINE}}/event_news_feed.py\n\nRules:\n- If the command succeeds (exit 0), the final response is just the stdout lines verbatim.\n- If it fails or times out, the final response must be a short alert: \"[event_news_feed FAIL] <error summary>. feed 抓取失败, event_guard 走 fail-open 沿用上一份定级, 交易不阻塞; 请人工检查 {{JINCE_ENGINE}}/data/event_news_feed.json 的 errors 字段。\"\n- Do NOT modify any files, do NOT schedule other jobs, do NOT call any other tool. Single script run, report stdout.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "custom",
+      "model_snapshot": "agnes-3.0-flash",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 30,
+        "display": "every 30m"
+      },
+      "schedule_display": "every 30m",
+      "repeat": {
+        "times": null,
+        "completed": 37
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-02T08:38:31.321424+08:00",
+      "next_run_at": "2026-10-03T06:20:48.310718+08:00",
+      "last_run_at": "2026-10-03T05:50:48.310718+08:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": null,
+      "enabled_toolsets": [
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-03T05:50:15.191824+08:00",
+        "dispatched_at": "2026-10-03T05:50:21.155541+08:00",
+        "lateness_seconds": 6.0,
+        "kind": "on_time"
+      },
+      "fire_claim": null,
+      "failure_streak": 0
+    }
+  ],
+  "updated_at": "2026-10-03T05:50:48.314723+08:00"
+}

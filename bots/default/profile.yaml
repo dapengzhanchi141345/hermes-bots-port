@@ -1,0 +1,9 @@
+description: Hermes 多智能体总调度：李彦明唯一对话出口。直接干通用活（写码/文件/自动化/单文件HTML/公众号稿/教学），交易活派金策 3 子岗，专家活经
+  kanban 派单给 22 专家 bot，收结果汇总汇报。
+description_auto: false
+ui_meta:
+  hermes-bots:
+    groups:
+      - 金策·宗师团
+    group: 金策·宗师团
+  hermes-bots: 2

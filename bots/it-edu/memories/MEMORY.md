@@ -1,0 +1,1 @@
+实测单文件HTML：{{HERMES_HOME_PARENT}}/ai_course 已装 node playwright+chromium（headless 可开 file://），复用脚本 prac_test.js/shot_prac.js；单文件教学系统页面div未闭合会让后续页嵌套进隐藏页、iframe高度塌成0，只有真浏览器能查出。

@@ -1,0 +1,10 @@
+description: 金策宗师团策略研发官 bot：接管strategy_rd+meta_evolver判断环节(策略上线/退役/调参)，输出进研发台账
+description_auto: false
+display_name: 金策·策略研发
+ui_meta:
+  hermes-bots:
+    groups:
+      - 金策·宗师团
+    group: 金策·宗师团
+_ui_meta_revisions:
+  hermes-bots: 4
