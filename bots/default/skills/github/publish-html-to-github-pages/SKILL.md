@@ -24,7 +24,7 @@ Class of task: turn a local self-contained HTML artifact (dashboard, report, sin
 ## Commands (gh first; this host has `gh` authenticated as `dapengzhanchi141345`)
 ```bash
 # 1) scratch repo with only the artifact
-cd /c/Users/ASUS && rm -rf <name> && mkdir <name> && cd <name>
+cd {{USER_HOME}} && rm -rf <name> && mkdir <name> && cd <name>
 cp "E:/path/to/artifact.html" index.html
 git init -q && git add index.html && git commit -m "publish"
 git branch -M main          # git init here defaults to master; Pages+push expect main

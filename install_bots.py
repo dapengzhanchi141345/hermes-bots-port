@@ -27,6 +27,15 @@ BOTS_DIR = os.path.abspath(BOTS_DIR)
 
 # ---------- 1. 识别 hermes home ----------
 def find_hermes_home():
+    explicit = None
+    # 命令行显式指定优先：绝不静默回退（路径不存在则新建，保证任意位置都能装）
+    for a in sys.argv[2:]:
+        if a.startswith("--home="):
+            explicit = a[7:]
+    if explicit is not None:
+        explicit = explicit.replace("/", os.sep)
+        os.makedirs(explicit, exist_ok=True)
+        return explicit
     cands = []
     if os.environ.get("HERMES_HOME"):
         cands.append(os.environ["HERMES_HOME"])
@@ -38,14 +47,14 @@ def find_hermes_home():
         d = os.path.dirname(d)
     # 常见位置
     for home in (os.path.expanduser("~"),):
-        for rel in (".hermes", "AppData/Local/hermes", "workbuddy/hermes", "国外模型/hermes"):
+        for rel in (".hermes", "AppData/Local/hermes", "workbuddy/hermes"):
             p = os.path.join(home, *rel.split("/"))
             if os.path.exists(os.path.join(p, "config.yaml")):
                 cands.append(p)
     for c in cands:
         if os.path.isdir(c):
             return c
-    raise SystemExit("找不到 Hermes 主目录（没有 config.yaml）。请用环境变量 HERMES_HOME 指定，或把路径作为参数传进来。")
+    raise SystemExit("找不到 Hermes 主目录（没有 config.yaml）。请用 --home=<路径> 指定。")
 
 HERMES_HOME = find_hermes_home()
 HERMES_HOME_PARENT = os.path.dirname(HERMES_HOME)
@@ -60,7 +69,8 @@ if os.path.exists(paths_file):
 RESOLVED = {
     "{{WORKBUDDY}}":         custom.get("WORKBUDDY", os.path.join(HERMES_HOME, "workbuddy")),
     "{{HERMES_HOME_PARENT}}": custom.get("HERMES_HOME_PARENT", HERMES_HOME_PARENT),
-    "{{JINCE_ENGINE}}":      custom.get("JINCE_ENGINE", os.path.join(HERMES_HOME, "GoldstrategyEngine")),
+    "{{USER_HOME}}": os.path.expanduser('~'),
+  "{{JINCE_ENGINE}}":      custom.get("JINCE_ENGINE", os.path.join(HERMES_HOME, "GoldstrategyEngine")),
 }
 # 统一成 / 分隔再写回，避免 Windows 双反斜杠进 JSON 源的问题
 def norm(p): return p.replace("\\", "/")

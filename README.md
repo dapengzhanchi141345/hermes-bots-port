@@ -65,3 +65,15 @@ config.yaml 里 `api_key: ''` 的空位同理。金策 3 个子 bot 各有专属
 - MT5 账户号 60137964：`<MT5_ACCOUNT>`
 - 绝对路径：全部占位符化，无 `E:\workbuddy` 等残留
 - 群聊历史日志：profile.yaml 里 `hermes-bots-groups` 段已剥除
+
+## 金策客户专包（加密交付，不在本公开仓）
+
+给客户单独交付的「金策宗师团 3 岗」加密 7z 件（chief / risk-officer / strategy-rd
++ default 金策节点 + MT5 共享技能），密码单独发：
+
+- 件：`jince客户安装包.7z`（AES-256 加密，WinRAR/7-Zip 解压）
+- 解压后：`python install_jince.py [--home=<对方hermes主目录>]`
+- 占位符落点可写包内 `paths.json` 定制
+- 引擎代码不在包内（客户需独立装 MT5 交易引擎），接实盘前按 chief SOP 逐岗验收、默认 DRY-RUN
+
+公开仓只放全量脱敏 bots/ 资产；金策专包与密码文件已 .gitignore 挡掉，永不上仓。
